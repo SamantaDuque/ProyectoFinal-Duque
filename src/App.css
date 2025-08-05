@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1rem;
+  background-color: #f2f2f2;
 }
 
-.App-link {
-  color: #61dafb;
+nav div {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav div a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav div a:hover {
+  color: #67819c;
+}
+
+.carrito-logo {
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.greeting {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.brand-name {
+  margin-left: 10px;
+}
+
+.brand-logo {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
 }
