@@ -42,6 +42,7 @@ nav div a:hover {
   margin-right: 10px;
   width: 50px;
   height: 50px;
+<<<<<<< HEAD
 }
 
 /* Contenedor de productos en grid */
@@ -185,3 +186,6 @@ nav div a:hover {
 .producto-detalle button:hover {
   background-color: #556680;
 }
+=======
+}
+>>>>>>> 0ab4cf6fdf80d63ff6a41f7ef18226e836f6e85b
