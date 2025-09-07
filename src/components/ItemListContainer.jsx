@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import productosData from "../data/productos";
@@ -44,16 +43,3 @@ const ItemListContainer = ({ greeting }) => {
 };
 
 export default ItemListContainer;
-=======
-import React from "react";
-
-const ItemListContainer = ({greeting}) => {
-    return (
-        <div>
-            <h1 className="greeting">{greeting}</h1>
-        </div>
-    ); 
-};
-
-export default ItemListContainer
->>>>>>> 0ab4cf6fdf80d63ff6a41f7ef18226e836f6e85b
