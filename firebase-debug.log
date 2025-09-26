@@ -1,0 +1,21 @@
+[debug] [2025-09-26T16:57:51.206Z] ----------------------------------------------------------------------
+[debug] [2025-09-26T16:57:51.208Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\duque\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-09-26T16:57:51.209Z] CLI Version:   14.17.0
+[debug] [2025-09-26T16:57:51.209Z] Platform:      win32
+[debug] [2025-09-26T16:57:51.209Z] Node Version:  v22.19.0
+[debug] [2025-09-26T16:57:51.209Z] Time:          Fri Sep 26 2025 13:57:51 GMT-0300 (hora estándar de Argentina)
+[debug] [2025-09-26T16:57:51.209Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-09-26T16:57:51.213Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-09-26T16:57:51.214Z] > authorizing via signed-in user (duquesamanta@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\duque\CreaTuLanding-Duque
+

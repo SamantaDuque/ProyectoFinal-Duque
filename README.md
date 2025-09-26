@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# Proyecto Final: E-commerce "Teje y Desteje"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
+Este proyecto consiste en un **e-commerce** desarrollado con **React** como front-end y **Firebase Firestore** como base de datos. Permite navegar por un catálogo de productos, ver detalles, agregar productos al carrito, y finalizar la compra generando un ID de orden único.
 
-## Available Scripts
+El objetivo del proyecto es demostrar conocimientos en **React**, manejo de **hooks**, **Context API** para estado global (carrito de compras), y la integración con Firebase para persistencia de datos.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Tecnologías utilizadas
+- **React** (Single Page Application)
+- **React Router** para navegación
+- **Firebase Firestore** para almacenar productos y registros de compras
+- **CSS** para estilos
+- **JavaScript (ES6+)** como lenguaje principal
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Estructura del proyecto
 
-### `npm test`
+src/
+├── components/
+│   ├── CartWidget.jsx
+│   ├── CartItem.jsx
+│   ├── ItemCount.jsx
+│   ├── ItemDetail.jsx
+│   ├── ItemList.jsx
+│   └── NavBar.jsx
+├── containers/
+│   ├── Cart.jsx
+│   ├── CheckoutForm.jsx
+│   ├── ItemDetailContainer.jsx
+│   └── ItemListContainer.jsx
+├── context/
+│   └── CartContext.jsx
+├── pages/
+│   └── Home.jsx
+├── firebase/
+│   └── config.js
+├── App.jsx
+└── App.css
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalación
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clonar el repositorio:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+git clone https://github.com/SamantaDuque/ProyectoFinal-Duque.git
 
-### `npm run eject`
+2. Entrar a la carpeta del proyecto:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+cd ProyectoFinal-Duque
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Instalar dependencias:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Crear archivo .env con tus credenciales de Firebase (no subir al repositorio):
 
-## Learn More
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+REACT_APP_FIREBASE_MEASUREMENT_ID=your_measurement_id
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Iniciar la aplicación:
 
-### Code Splitting
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Funcionalidades
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Listado de productos: desde Firestore, con imagen, nombre, precio y botón de agregar al carrito.
 
-### Making a Progressive Web App
+Detalle de producto: muestra información detallada y permite agregar al carrito con cantidad seleccionable.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Carrito de compras: muestra los productos agregados, sus cantidades, subtotal por producto y total general. Permite vaciar el carrito.
 
-### Advanced Configuration
+Checkout: al finalizar la compra, genera un ID de orden en Firestore y muestra confirmación al usuario.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Carrito en la NavBar: muestra el número total de unidades agregadas.
 
-### Deployment
+## Experiencia de usuario
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Renderizado condicional para mostrar loaders (Cargando productos...) y mensajes de error (No hay productos disponibles.).
 
-### `npm run build` fails to minify
+Botones de navegación y enlaces internos respetando el modelo SPA (sin recargar la página).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Oculta el componente ItemCount después de agregar un producto al carrito.
+
+Permite volver al listado de productos desde la vista de detalle con un botón "Volver".
+
+Permite agregar más de un mismo producto al carrito sin reemplazar cantidades.
+
+Genera un ID único de compra al finalizar la orden.
+
+## Estilos
+
+CSS básico en App.css, incluyendo:
+
+NavBar con logo y enlaces.
+
+Tarjetas de productos con hover.
+
+Carrito flotante en la barra de navegación.
+
+Diseño responsivo para el listado de productos.
+
+Carrito y checkout con botones claros y subtotales destacados.
+
+## Notas Importantes
+
+El archivo .env no debe subirse al repositorio.
+
+Se recomienda probar la app haciendo un deploy en plataformas gratuitas como Vercel o Netlify.
+
+Todas las rutas principales funcionan: / (Home), /productos, /producto/:id, /cart, /checkout.
+
+## Autora
+
+Samanta Duque
